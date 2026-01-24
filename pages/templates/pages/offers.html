@@ -1,0 +1,165 @@
+﻿{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Coaching Fitness – Services | Jascoaching{% endblock %}
+{% block nav_offers_active %}active{% endblock %}
+
+{% block content %}
+<section class="hero-wrap hero-wrap-2"
+         style="background-image: url({% static 'images/bg_2.jpg' %});"
+         data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text align-items-end">
+      <div class="col-md-9 ftco-animate pb-5">
+        <p class="breadcrumbs mb-2">
+          <span class="mr-2"><a href="{% url 'home' %}">Accueil <i class="ion-ios-arrow-forward"></i></a></span>
+          <span>Coaching <i class="ion-ios-arrow-forward"></i></span>
+        </p>
+        <h1 class="mb-0 bread">Coaching Fitness</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center pb-5 mb-3">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h2>Un accompagnement clair, structuré et efficace</h2>
+        <span class="subheading">Ce que je te propose</span>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-3 d-flex services align-self-stretch px-4 ftco-animate">
+        <div class="d-block text-center">
+          <div class="icon d-flex justify-content-center align-items-center">
+            <span class="flaticon-goal"></span>
+          </div>
+          <div class="media-body p-2 mt-3">
+            <h3 class="heading">Perte de graisse</h3>
+            <p>Stratégie progressive pour perdre du gras sans frustration ni effet yo-yo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 d-flex services align-self-stretch px-4 ftco-animate">
+        <div class="d-block text-center">
+          <div class="icon d-flex justify-content-center align-items-center">
+            <span class="flaticon-performance"></span>
+          </div>
+          <div class="media-body p-2 mt-3">
+            <h3 class="heading">Prise de muscle</h3>
+            <p>Programmes efficaces, surcharge progressive et suivi des performances.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 d-flex services align-self-stretch px-4 ftco-animate">
+        <div class="d-block text-center">
+          <div class="icon d-flex justify-content-center align-items-center">
+            <span class="flaticon-stress"></span>
+          </div>
+          <div class="media-body p-2 mt-3">
+            <h3 class="heading">Remise en forme</h3>
+            <p>Reprendre le sport en sécurité, retrouver énergie, cardio et confiance.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 d-flex services align-self-stretch px-4 ftco-animate">
+        <div class="d-block text-center">
+          <div class="icon d-flex justify-content-center align-items-center">
+            <span class="flaticon-account"></span>
+          </div>
+          <div class="media-body p-2 mt-3">
+            <h3 class="heading">Suivi & motivation</h3>
+            <p>Accountability, ajustements réguliers et accompagnement humain.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center pb-5 mb-3">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h2>Pourquoi ce coaching fonctionne</h2>
+        <span class="subheading">Méthode + suivi réel</span>
+      </div>
+    </div>
+
+    <div class="row d-flex no-gutters">
+      <div class="col-md-6 d-flex">
+        <div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end mb-4 mb-sm-0"
+             style="background-image:url({% static 'images/about.jpg' %});">
+          <a href="{% url 'contact' %}" class="icon-video d-flex justify-content-center align-items-center">
+            <span class="fa fa-play"></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-6 pl-md-5 py-md-5">
+
+        <div class="services-2 w-100 d-flex">
+          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-account"></span></div>
+          <div class="text pl-4">
+            <h4>Programme sur mesure</h4>
+            <p>Adapté à ton niveau, ton emploi du temps et ton matériel.</p>
+          </div>
+        </div>
+
+        <div class="services-2 w-100 d-flex">
+          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-skills"></span></div>
+          <div class="text pl-4">
+            <h4>Technique & progression</h4>
+            <p>Tu sais quoi faire, comment le faire, et comment progresser.</p>
+          </div>
+        </div>
+
+        <div class="services-2 w-100 d-flex">
+          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-performance"></span></div>
+          <div class="text pl-4">
+            <h4>Résultats mesurables</h4>
+            <p>Poids, mensurations, force, énergie et constance.</p>
+          </div>
+        </div>
+
+        <div class="services-2 w-100 d-flex">
+          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-event"></span></div>
+          <div class="text pl-4">
+            <h4>Approche durable</h4>
+            <p>Pas de solution extrême, mais des habitudes solides.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <div class="bg-secondary w-100 rounded p-4">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <h2 class="mb-2" style="color:#000; font-size:20px;">Tu veux savoir quel coaching est fait pour toi ?</h2>
+              <p class="mb-0" style="color:#000;">Bilan gratuit : objectifs, niveau, contraintes et plan d’action.</p>
+            </div>
+            <div class="col-md-4 text-md-right mt-3 mt-md-0">
+              <a href="{% url 'contact' %}" class="btn btn-primary px-4 py-3">
+                Réserver mon bilan gratuit
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

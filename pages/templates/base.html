@@ -1,0 +1,249 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="{% block html_lang %}fr{% endblock %}">
+  <head>
+    <title>{% block title %}Jascoaching Fitness{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    {% block css %}
+      <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+      <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+      <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
+  </head>
+
+  <script>
+    // Sécurité: supprime le loader si jamais il existe
+    document.addEventListener("DOMContentLoaded", function () {
+      var loader = document.getElementById("ftco-loader");
+      if (loader) loader.remove();
+    });
+  </script>
+
+  <body>
+    <!-- Top bar -->
+    <div class="wrap">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p class="mb-0 phone">
+              <span class="ml-3"><span class="fa fa-bolt"></span> Coaching fitness personnalisé</span>
+            </p>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <div class="social-media">
+              <p class="mb-0 d-flex">
+                <a href="#" class="d-flex align-items-center justify-content-center" aria-label="Instagram">
+                  <span class="fa fa-instagram"><i class="sr-only">Instagram</i></span>
+                </a>
+                <a href="#" class="d-flex align-items-center justify-content-center" aria-label="TikTok">
+                  <span class="fa fa-music"><i class="sr-only">TikTok</i></span>
+                </a>
+                <a href="#" class="d-flex align-items-center justify-content-center" aria-label="YouTube">
+                  <span class="fa fa-youtube-play"><i class="sr-only">YouTube</i></span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">
+          Jascoaching<span>Fitness</span>
+        </a>
+
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fa fa-bars"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item {% block nav_home_active %}{% endblock %}">
+              <a href="{% url 'home' %}" class="nav-link">Accueil</a>
+            </li>
+            <li class="nav-item {% block nav_about_active %}{% endblock %}">
+              <a href="{% url 'about' %}" class="nav-link">À propos</a>
+            </li>
+            <li class="nav-item {% block nav_offers_active %}{% endblock %}">
+              <a href="{% url 'offers' %}" class="nav-link">Coaching</a>
+            </li>
+            <li class="nav-item {% block nav_results_active %}{% endblock %}">
+              <a href="{% url 'results' %}" class="nav-link">Résultats</a>
+            </li>
+            <li class="nav-item {% block nav_blog_active %}{% endblock %}">
+              <a href="{% url 'blog:list' %}" class="nav-link">Conseils</a>
+            </li>
+            <li class="nav-item {% block nav_contact_active %}{% endblock %}">
+              <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+            </li>
+          </ul>
+
+          <!-- CTA button à droite (visible surtout desktop) -->
+          <div class="d-none d-lg-block">
+            <a href="{% url 'contact' %}" class="btn btn-primary ml-lg-3">
+              Appel gratuit
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container-fluid px-lg-5">
+        <div class="row">
+          <div class="col-md-9 py-5">
+            <div class="row">
+              <div class="col-md-4 mb-md-0 mb-4">
+                <h2 class="footer-heading">Jascoaching Fitness</h2>
+                <p>
+                  Coaching fitness personnalisé : perte de gras, prise de muscle, remise en forme.
+                  Méthode simple, suivi régulier, résultats durables.
+                </p>
+                <ul class="ftco-footer-social p-0">
+                  <li class="ftco-animate">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="fa fa-instagram"></span></a>
+                  </li>
+                  <li class="ftco-animate">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="YouTube"><span class="fa fa-youtube-play"></span></a>
+                  </li>
+                  <li class="ftco-animate">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="TikTok"><span class="fa fa-music"></span></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-md-8">
+                <div class="row justify-content-center">
+                  <div class="col-md-12 col-lg-10">
+                    <div class="row">
+                      <div class="col-md-4 mb-md-0 mb-4">
+                        <h2 class="footer-heading">Coaching</h2>
+                        <ul class="list-unstyled">
+                          <li><a href="{% url 'offers' %}" class="py-1 d-block">Perte de poids</a></li>
+                          <li><a href="{% url 'offers' %}" class="py-1 d-block">Prise de muscle</a></li>
+                          <li><a href="{% url 'offers' %}" class="py-1 d-block">Remise en forme</a></li>
+                          <li><a href="{% url 'offers' %}" class="py-1 d-block">Suivi nutrition</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="col-md-4 mb-md-0 mb-4">
+                        <h2 class="footer-heading">Ressources</h2>
+                        <ul class="list-unstyled">
+                          <li><a href="{% url 'blog:list' %}" class="py-1 d-block">Articles fitness</a></li>
+                          <li><a href="{% url 'blog:list' %}" class="py-1 d-block">Nutrition simple</a></li>
+                          <li><a href="{% url 'blog:list' %}" class="py-1 d-block">Programmes</a></li>
+                          <li><a href="{% url 'blog:list' %}" class="py-1 d-block">Mindset</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="col-md-4 mb-md-0 mb-4">
+                        <h2 class="footer-heading">Contact</h2>
+                        <ul class="list-unstyled">
+                          <li><a href="{% url 'contact' %}" class="py-1 d-block">Réserver un appel gratuit</a></li>
+                          <li><a href="mailto:contact@jascoaching.ch" class="py-1 d-block">contact@jascoaching.ch</a></li>
+                          <li><a href="tel:+41000000000" class="py-1 d-block">+41 00 000 00 00</a></li>
+                          <li><span class="py-1 d-block">Suisse</span></li>
+                        </ul>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-md-5">
+              <div class="col-md-12">
+                <p class="copyright">
+                  Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                  Jascoaching Fitness. Tous droits réservés.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- mini form footer -->
+          <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
+            <h2 class="footer-heading">Bilan gratuit</h2>
+            <p class="mb-3" style="color: rgba(255,255,255,.7);">
+              Dis-moi ton objectif, je te réponds avec une première direction.
+            </p>
+
+            <form action="{% url 'contact' %}" method="get" class="form-consultation">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Ton prénom">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Ton email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Objectif (perte de poids, etc.)">
+              </div>
+              <div class="form-group">
+                <textarea cols="30" rows="3" class="form-control" placeholder="Ton message"></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="form-control submit px-3">Aller au contact</button>
+              </div>
+            </form>
+
+            <small style="color: rgba(255,255,255,.6);">
+              En cliquant, tu seras redirigé vers la page Contact.
+            </small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Loader (garde, mais on le force à disparaître) -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+      </svg>
+    </div>
+
+    {% block js %}
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+      <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+      <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+      <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+      <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+      <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+      <script src="{% static 'js/scrollax.min.js' %}"></script>
+
+      <script src="{% static 'js/main.js' %}"></script>
+
+      <script>
+        // Force le loader à disparaître (au cas où main.js le laisse)
+        window.addEventListener("load", function () {
+          var loader = document.getElementById("ftco-loader");
+          if (loader) {
+            loader.classList.remove("show");
+            loader.style.display = "none";
+          }
+        });
+      </script>
+    {% endblock %}
+  </body>
+</html>
