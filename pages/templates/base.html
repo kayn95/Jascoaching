@@ -20,7 +20,6 @@
   </head>
 
   <script>
-    // Sécurité: supprime le loader si jamais il existe
     document.addEventListener("DOMContentLoaded", function () {
       var loader = document.getElementById("ftco-loader");
       if (loader) loader.remove();
@@ -74,14 +73,8 @@
             <li class="nav-item {% block nav_home_active %}{% endblock %}">
               <a href="{% url 'home' %}" class="nav-link">Accueil</a>
             </li>
-            <li class="nav-item {% block nav_about_active %}{% endblock %}">
-              <a href="{% url 'about' %}" class="nav-link">À propos</a>
-            </li>
             <li class="nav-item {% block nav_offers_active %}{% endblock %}">
-              <a href="{% url 'offers' %}" class="nav-link">Coaching</a>
-            </li>
-            <li class="nav-item {% block nav_results_active %}{% endblock %}">
-              <a href="{% url 'results' %}" class="nav-link">Résultats</a>
+              <a href="/#packs" class="nav-link">Coaching</a>
             </li>
             <li class="nav-item {% block nav_blog_active %}{% endblock %}">
               <a href="{% url 'blog:list' %}" class="nav-link">Conseils</a>
@@ -91,7 +84,7 @@
             </li>
           </ul>
 
-          <!-- CTA button à droite (visible surtout desktop) -->
+          <!-- CTA button -->
           <div class="d-none d-lg-block">
             <a href="{% url 'contact' %}" class="btn btn-primary ml-lg-3">
               Appel gratuit
@@ -211,7 +204,7 @@
       </div>
     </footer>
 
-    <!-- Loader (garde, mais on le force à disparaître) -->
+    <!-- Loader -->
     <div id="ftco-loader" class="show fullscreen">
       <svg class="circular" width="48px" height="48px">
         <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
@@ -234,16 +227,6 @@
 
       <script src="{% static 'js/main.js' %}"></script>
 
-      <script>
-        // Force le loader à disparaître (au cas où main.js le laisse)
-        window.addEventListener("load", function () {
-          var loader = document.getElementById("ftco-loader");
-          if (loader) {
-            loader.classList.remove("show");
-            loader.style.display = "none";
-          }
-        });
-      </script>
     {% endblock %}
   </body>
 </html>

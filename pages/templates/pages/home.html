@@ -6,7 +6,6 @@
 
 {% block content %}
 
-<!-- HERO / SLIDER -->
 <div class="hero-wrap">
   <div class="home-slider owl-carousel">
 
@@ -22,8 +21,7 @@
                 Programmes adaptés à ton niveau + suivi hebdo + plan nutrition simple et réaliste.
               </p>
               <p>
-                <a href="{% url 'contact' %}" class="btn btn-white">Réserver un appel gratuit</a>
-                <a href="#packs" class="btn btn-primary ml-2">Voir les packs</a>
+                <a href="#packs" class="btn btn-white">Voir les packs</a>
               </p>
             </div>
           </div>
@@ -42,7 +40,7 @@
               <p class="mb-4" style="color: rgba(255,255,255,.9);">
                 Entraînement structuré + corrections + ajustements chaque semaine.
               </p>
-              <p><a href="{% url 'contact' %}" class="btn btn-white">Commencer maintenant</a></p>
+              <p><a href="#packs" class="btn btn-white">Commencer maintenant</a></p>
             </div>
           </div>
         </div>
@@ -60,7 +58,7 @@
               <p class="mb-4" style="color: rgba(255,255,255,.9);">
                 Tu avances avec un cadre, du soutien, et des résultats mesurables.
               </p>
-              <p><a href="{% url 'contact' %}" class="btn btn-white">Demander un bilan</a></p>
+              <p><a href="#promessse" class="btn btn-white">Pourquoi ca marche ?</a></p>
             </div>
           </div>
         </div>
@@ -70,7 +68,7 @@
   </div>
 </div>
 
-<!-- INTRO (valeurs + CTA) -->
+<!--INTRO -->
 <section class="intro py-5 bg-light">
   <div class="container">
     <div class="row">
@@ -100,7 +98,7 @@
       </div>
 
       <div class="col-md-4">
-        <div class="intro-box w-100">
+        <div class="col text-center">
           <p class="mb-0">
             <a href="{% url 'contact' %}" class="btn btn-primary">Réserver un appel gratuit</a>
           </p>
@@ -111,7 +109,7 @@
   </div>
 </section>
 
-<!-- SERVICES (fitness) -->
+<!--SERVICES-->
 <section class="ftco-section">
   <div class="container">
     <div class="row justify-content-center pb-5 mb-3">
@@ -175,15 +173,100 @@
 
     <div class="row mt-5">
       <div class="col text-center">
-        <a href="{% url 'contact' %}" class="btn btn-primary px-5">Obtenir mon plan</a>
+        <a href="/#packs" class="btn btn-primary px-5">Obtenir mon plan</a>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- WHY COACHING (promesse + preuve) -->
-<section class="ftco-section bg-light">
+<!-- PRICING -->
+<section class="ftco-section bg-light" id="packs">
+  <div class="container">
+    <div class="row justify-content-center pb-5 mb-3">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h2>Choisis ton pack</h2>
+        <span class="subheading">Coaching Fitness</span>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6 col-lg-3 ftco-animate">
+        <div class="block-7">
+          <div class="text-center">
+            <span class="price"><sup>CHF</sup> <span class="number">300</span></span>
+            <span class="excerpt d-block">PROGRAMME COMPLET BEST SELLER</span>
+            <ul class="pricing-text mb-5">
+              <li><span class="fa fa-check mr-2"></span>Entraînement + nutrition personnalisés</li>
+              <li><span class="fa fa-check mr-2"></span>Adapté à ton objectif & ton mode de vie</li>
+              <li><span class="fa fa-check mr-2"></span>Approche durable (pas de générique)</li>
+              <li><span class="fa fa-check mr-2"></span>Programmes livrés en PDF</li>
+              <li><span class="fa fa-check mr-2"></span>Support email</li>
+            </ul>
+            <a href="{% url 'contact' %}" class="btn btn-primary d-block px-2 py-3">Candidater</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 ftco-animate">
+        <div class="block-7">
+          <div class="text-center">
+            <span class="price"><sup>CHF</sup> <span class="number">180</span></span>
+            <span class="excerpt d-block">PROGRAMME d'entraînement personnalisé</span>
+            <ul class="pricing-text mb-5">
+              <li><span class="fa fa-check mr-2"></span>Structure complète sur 8 semaines</li>
+              <li><span class="fa fa-check mr-2"></span>Volume, intensité & récupération adaptés</li>
+              <li><span class="fa fa-check mr-2"></span>Exercices selon ton niveau & ta morphologie</li>
+              <li><span class="fa fa-check mr-2"></span>Progression planifiée</li>
+              <li><span class="fa fa-check mr-2"></span>Programme livré en PDF</li>
+            </ul>
+            <a href="{% url 'contact' %}" class="btn btn-primary d-block px-2 py-3">Réserver</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 ftco-animate">
+        <div class="block-7">
+          <div class="text-center">
+            <span class="price"><sup>CHF</sup> <span class="number">180</span></span>
+            <span class="excerpt d-block">Programme nutritionnel personnalisé</span>
+            <ul class="pricing-text mb-5">
+              <li><span class="fa fa-check mr-2"></span>Plan nutritionnel 100% personnalisé</li>
+              <li><span class="fa fa-check mr-2"></span>Prise de muscle / perte de graisse / recomposition</li>
+              <li><span class="fa fa-check mr-2"></span>Adapté à ton rythme de vie</li>
+              <li><span class="fa fa-check mr-2"></span>Approche durable, sans extrêmes</li>
+              <li><span class="fa fa-check mr-2"></span>Programme livré en PDF</li>
+            </ul>
+            <a href="{% url 'contact' %}" class="btn btn-primary d-block px-2 py-3">Transformer</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 ftco-animate">
+        <div class="block-7">
+          <div class="text-center">
+            <span class="price"><sup>CHF</sup> <span class="number">100</span>/mois</span>
+            <span class="excerpt d-block">suivi à distance</span>
+            <a href="{% url 'contact' %}" class="btn btn-primary d-block px-2 py-3">Distanciel</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row mt-4">
+      <div class="col text-center">
+        <p class="mb-0">Tu ne sais pas quel pack choisir ?</p>
+        <a href="{% url 'contact' %}" class="btn btn-white px-5 mt-2">Je fais le bilan gratuit</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--PROMESSES-->
+<section class="ftco-counter" id="promessse">
   <div class="container">
     <div class="row justify-content-center pb-5 mb-3">
       <div class="col-md-7 heading-section text-center ftco-animate">
@@ -191,16 +274,6 @@
         <span class="subheading">Méthode + suivi</span>
       </div>
     </div>
-
-    <div class="row d-flex no-gutters">
-      <div class="col-md-6 d-flex">
-        <div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end mb-4 mb-sm-0"
-             style="background-image: url('{% static 'images/about.jpg' %}');">
-          <a href="{% url 'contact' %}" class="icon-video d-flex justify-content-center align-items-center" title="Démarrer">
-            <span class="fa fa-play"></span>
-          </a>
-        </div>
-      </div>
 
       <div class="col-md-6 pl-md-5 py-md-5">
         <div class="services-2 w-100 d-flex">
@@ -231,285 +304,18 @@
           <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-event"></span></div>
           <div class="text pl-4">
             <h4>Rythme durable</h4>
-            <p>On construit une routine stable, sans “all-in” 2 semaines.</p>
+            <p>On construit une routine stable, sans “all-in”.</p>
           </div>
         </div>
 
-        <div class="mt-4">
-          <a href="{% url 'contact' %}" class="btn btn-primary">Faire le bilan gratuit</a>
+        <div class="row mt-5">
+          <div class="col text-center">
+            <a href="{% url 'contact' %}" class="btn btn-primary px-5">Faire le bilan gratuit</a>
+          </div>
         </div>
+
       </div>
     </div>
   </div>
 </section>
-
-<!-- COUNTERS (plus fitness-friendly) -->
-<section class="ftco-counter" id="section-counter">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-        <div class="block-18 text-center">
-          <div class="text"><strong class="number" data-number="200">0</strong></div>
-          <div class="text"><span>Clients accompagnés</span></div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-        <div class="block-18 text-center">
-          <div class="text"><strong class="number" data-number="12">0</strong></div>
-          <div class="text"><span>Semaines (programme complet)</span></div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-        <div class="block-18 text-center">
-          <div class="text"><strong class="number" data-number="3">0</strong></div>
-          <div class="text"><span>Suivis / semaine</span></div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-        <div class="block-18 text-center">
-          <div class="text"><strong class="number" data-number="24">0</strong></div>
-          <div class="text"><span>Support (heures de réponse)</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIES (fitness) -->
-<section class="ftco-section testimony-section bg-secondary">
-  <div class="container">
-    <div class="row justify-content-center pb-5 mb-3">
-      <div class="col-md-7 heading-section heading-section-white text-center ftco-animate">
-        <h2>Résultats & retours</h2>
-        <span class="subheading">Avis clients</span>
-      </div>
-    </div>
-
-    <div class="row ftco-animate">
-      <div class="col-md-12">
-        <div class="carousel-testimony owl-carousel ftco-owl">
-
-          <div class="item">
-            <div class="testimony-wrap py-4">
-              <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
-              <div class="text">
-                <p class="mb-4">J’ai perdu du gras sans me sentir au régime. Plan simple, suivi régulier, je suis resté constant.</p>
-                <div class="d-flex align-items-center">
-                  <div class="user-img" style="background-image: url({% static 'images/person_1.jpg' %})"></div>
-                  <div class="pl-3">
-                    <p class="name">Client</p>
-                    <span class="position">Objectif : perte de poids</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="testimony-wrap py-4">
-              <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
-              <div class="text">
-                <p class="mb-4">J’ai repris le sport sans me blesser. Les séances sont progressives et adaptées à mon emploi du temps.</p>
-                <div class="d-flex align-items-center">
-                  <div class="user-img" style="background-image: url({% static 'images/person_2.jpg' %})"></div>
-                  <div class="pl-3">
-                    <p class="name">Cliente</p>
-                    <span class="position">Objectif : remise en forme</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="testimony-wrap py-4">
-              <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
-              <div class="text">
-                <p class="mb-4">J’ai enfin une structure. Je sais quoi faire, quand, et comment progresser.</p>
-                <div class="d-flex align-items-center">
-                  <div class="user-img" style="background-image: url({% static 'images/person_3.jpg' %})"></div>
-                  <div class="pl-3">
-                    <p class="name">Client</p>
-                    <span class="position">Objectif : prise de muscle</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="row mt-4">
-      <div class="col text-center">
-        <a href="{% url 'contact' %}" class="btn btn-white px-5">Je veux mon coaching</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- BLOG (articles récents du blog) -->
-<section class="ftco-section">
-  <div class="container">
-    <div class="row justify-content-center pb-5 mb-3">
-      <div class="col-md-7 heading-section text-center ftco-animate">
-        <h2>Conseils fitness & nutrition</h2>
-        <span class="subheading">Articles récents</span>
-      </div>
-    </div>
-
-    <div class="row d-flex">
-      {% for article in recent_articles %}
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry align-self-stretch">
-            <a href="{% url 'blog:detail' article.slug %}"
-               class="block-20 rounded"
-               style="background-image: url(
-                 {% if article.image %}
-                   {{ article.image.url }}
-                 {% else %}
-                   {% static 'images/image_1.jpg' %}
-                 {% endif %}
-               );">
-            </a>
-
-            <div class="text mt-3">
-              <div class="meta mb-2">
-                <div>
-                  <a href="{% url 'blog:detail' article.slug %}">
-                    {% if article.published_at %}
-                      {{ article.published_at|date:"d M Y" }}
-                    {% else %}
-                      {{ article.created_at|date:"d M Y" }}
-                    {% endif %}
-                  </a>
-                </div>
-                <div><a href="{% url 'blog:list' %}">Jascoaching</a></div>
-              </div>
-
-              <h3 class="heading">
-                <a href="{% url 'blog:detail' article.slug %}">{{ article.title }}</a>
-              </h3>
-
-              {% if article.excerpt %}
-                <p>{{ article.excerpt|truncatechars:80 }}</p>
-              {% else %}
-                <p>{{ article.content|striptags|truncatechars:80 }}</p>
-              {% endif %}
-            </div>
-          </div>
-        </div>
-      {% empty %}
-        <div class="col-md-12 text-center">
-          <p>Aucun article publié pour le moment.</p>
-        </div>
-      {% endfor %}
-    </div>
-
-    <div class="row mt-4">
-      <div class="col text-center">
-        <a href="{% url 'blog:list' %}" class="btn btn-primary px-5">Voir tous les articles</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- PRICING (fitness) -->
-<section class="ftco-section bg-light" id="packs">
-  <div class="container">
-    <div class="row justify-content-center pb-5 mb-3">
-      <div class="col-md-7 heading-section text-center ftco-animate">
-        <h2>Choisis ton pack</h2>
-        <span class="subheading">Coaching Fitness</span>
-      </div>
-    </div>
-
-    <div class="row">
-
-      <div class="col-md-6 col-lg-3 ftco-animate">
-        <div class="block-7">
-          <div class="text-center">
-            <span class="price"><sup>CHF</sup> <span class="number">49</span></span>
-            <span class="excerpt d-block">Bilan & Plan</span>
-            <ul class="pricing-text mb-5">
-              <li><span class="fa fa-check mr-2"></span>Analyse objectifs & niveau</li>
-              <li><span class="fa fa-check mr-2"></span>Plan d’entraînement 4 semaines</li>
-              <li><span class="fa fa-check mr-2"></span>Conseils nutrition de base</li>
-              <li><span class="fa fa-check mr-2"></span>1 ajustement</li>
-              <li><span class="fa fa-check mr-2"></span>Support email</li>
-            </ul>
-            <a href="{% url 'contact' %}" class="btn btn-primary d-block px-2 py-3">Je commence</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 ftco-animate">
-        <div class="block-7">
-          <div class="text-center">
-            <span class="price"><sup>CHF</sup> <span class="number">99</span></span>
-            <span class="excerpt d-block">Suivi 4 semaines</span>
-            <ul class="pricing-text mb-5">
-              <li><span class="fa fa-check mr-2"></span>Plan + progression</li>
-              <li><span class="fa fa-check mr-2"></span>Suivi hebdo (check-in)</li>
-              <li><span class="fa fa-check mr-2"></span>Ajustements illimités</li>
-              <li><span class="fa fa-check mr-2"></span>Nutrition personnalisée</li>
-              <li><span class="fa fa-check mr-2"></span>Support 24-48h</li>
-            </ul>
-            <a href="{% url 'contact' %}" class="btn btn-primary d-block px-2 py-3">Réserver</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 ftco-animate">
-        <div class="block-7">
-          <div class="text-center">
-            <span class="price"><sup>CHF</sup> <span class="number">249</span></span>
-            <span class="excerpt d-block">Transformation 12 semaines</span>
-            <ul class="pricing-text mb-5">
-              <li><span class="fa fa-check mr-2"></span>Plan complet + cycles</li>
-              <li><span class="fa fa-check mr-2"></span>Suivi hebdo + feedback</li>
-              <li><span class="fa fa-check mr-2"></span>Nutrition & habitudes</li>
-              <li><span class="fa fa-check mr-2"></span>Optimisation sommeil/stress</li>
-              <li><span class="fa fa-check mr-2"></span>Support prioritaire</li>
-            </ul>
-            <a href="{% url 'contact' %}" class="btn btn-primary d-block px-2 py-3">Transformer</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 ftco-animate">
-        <div class="block-7">
-          <div class="text-center">
-            <span class="price"><sup>CHF</sup> <span class="number">399</span></span>
-            <span class="excerpt d-block">Premium (1:1)</span>
-            <ul class="pricing-text mb-5">
-              <li><span class="fa fa-check mr-2"></span>Coaching 1:1 ultra personnalisé</li>
-              <li><span class="fa fa-check mr-2"></span>Suivi + adaptations fréquentes</li>
-              <li><span class="fa fa-check mr-2"></span>Stratégie nutrition avancée</li>
-              <li><span class="fa fa-check mr-2"></span>Objectifs performance</li>
-              <li><span class="fa fa-check mr-2"></span>Support prioritaire</li>
-            </ul>
-            <a href="{% url 'contact' %}" class="btn btn-primary d-block px-2 py-3">Candidater</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="row mt-4">
-      <div class="col text-center">
-        <p class="mb-0">Tu ne sais pas quel pack choisir ?</p>
-        <a href="{% url 'contact' %}" class="btn btn-white px-5 mt-2">Je fais le bilan gratuit</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 {% endblock %}
