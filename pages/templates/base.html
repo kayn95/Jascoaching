@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="{% block html_lang %}fr{% endblock %}">
   <head>
@@ -35,6 +36,7 @@
             <p class="mb-0 phone">
               <span class="ml-3"><span class="fa fa-bolt"></span> Coaching fitness personnalisé</span>
             </p>
+            
           </div>
           <div class="col d-flex justify-content-end">
             <div class="social-media">
@@ -166,6 +168,10 @@
                 <p class="copyright">
                   Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                   Jascoaching Fitness. Tous droits réservés.
+                  <ul class="list-unstyled">
+                  <li><a href="{% url 'privacy' %}">Politique de confidentialité</a></li>
+                  <li><a href="{% url 'legal' %}">Mentions légales</a></li>
+                  </ul>
                 </p>
               </div>
             </div>
@@ -204,6 +210,7 @@
       </div>
     </footer>
 
+    {% include "includes/cookie_banner.html" %}
     <!-- Loader -->
     <div id="ftco-loader" class="show fullscreen">
       <svg class="circular" width="48px" height="48px">
@@ -211,7 +218,7 @@
         <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
       </svg>
     </div>
-
+    
     {% block js %}
       <script src="{% static 'js/jquery.min.js' %}"></script>
       <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
@@ -228,5 +235,36 @@
       <script src="{% static 'js/main.js' %}"></script>
 
     {% endblock %}
+   
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("cookie-banner");
+    if (!banner) return;
+
+    const acceptBtn = document.getElementById("accept-cookies");
+    const rejectBtn = document.getElementById("reject-cookies");
+
+    // Affiche seulement si pas encore de choix
+    if (!localStorage.getItem("cookie_consent")) {
+      banner.style.display = "block";
+    } else {
+      banner.style.display = "none";
+      return;
+    }
+
+    acceptBtn?.addEventListener("click", function () {
+      localStorage.setItem("cookie_consent", "accepted");
+      banner.style.display = "none";
+    });
+
+    rejectBtn?.addEventListener("click", function () {
+      localStorage.setItem("cookie_consent", "rejected");
+      banner.style.display = "none";
+    });
+  });
+</script>
+
   </body>
+
 </html>

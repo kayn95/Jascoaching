@@ -52,3 +52,9 @@ def contact(request: HttpRequest) -> HttpResponse:
         form = ContactForm()
 
     return render(request, "pages/contact.html", {"form": form})
+
+def privacy(request):
+    return render(request, "pages/privacy.html")
+
+def legal(request):
+    return render(request, "pages/legal.html")
